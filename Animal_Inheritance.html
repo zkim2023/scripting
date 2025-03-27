@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Inheritance</title>
+</head>
+<body>
+    <h2>Animal Inheritance Example</h2>
+    <p id="animalSound"></p>
+
+    <script>
+        class Animal {
+            speak() {
+                return "Animal makes a sound";
+            }
+        }
+
+        class Dog extends Animal {
+            speak() {
+                return "Dog barks";
+            }
+        }
+
+        let myDog = new Dog();
+        document.getElementById("animalSound").innerHTML = myDog.speak();
+    </script>
+</body>
+</html>

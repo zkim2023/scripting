@@ -1,0 +1,18 @@
+<html>
+<head>  <title>Simple Addition</title> </head>
+<body>
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1"><br><br>
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2"><br><br>
+    <button onclick="calculateSum()">Add</button><br><br>
+    <label>Result: <span id="result">0</span></label>
+    <script>
+        function calculateSum() {
+            let num1 = parseFloat(document.getElementById("num1").value) || 0;
+            let num2 = parseFloat(document.getElementById("num2").value) || 0;
+            document.getElementById("result").innerText = num1 + num2;
+    }
+    </script>
+</body>
+</html>

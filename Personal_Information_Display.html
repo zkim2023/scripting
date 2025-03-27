@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+     <meta charset=”UFT-8”>
+     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+     <title>Personal Information Display</title>
+</head>
+<body>
+     <h2>Enter Your Personal Information</h2>
+
+     <button onclick="collectAndDisplayInfo()">Enter Information</button>
+
+     <script>
+          fuction collectAndDisplayInfo() {
+               // Collect user input using prompt()
+               let name = prompt("Enter your full name:");
+               let studentID = prompt("Enter your Student ID:");
+               let major = prompt("Enter your Major:");
+               let address = prompt("Enter your Address:");
+
+               // Validate if the user entered all information
+               if (!name || !studentID || !major || !address) {
+                    document.write("<h3>Please provide all details!</h3>");
+                    return;
+               }
+
+               // Display the collected information using document.write()
+               document.write("<h2>Your Information:</h2>");
+               document.write("<strong>Name:</strong> " + name + "<br>");
+               document.write("<strong>Student ID:</strong> " + studentID + "<br>");
+               document.write("<strong>Major:</strong> " + major + "<br>");
+               document.write("<strong>Address:</strong> " + address);
+          }
+     </script>
+</body>
+</html>

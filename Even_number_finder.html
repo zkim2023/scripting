@@ -1,0 +1,27 @@
+<!DOCTYPE hmtl>
+<html lang="en">
+<head>
+    <meta charset="UFT-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Numbers Finder</title>
+</head>
+<body>
+    <h2>Even Numbers Finder</h2>
+    <label for="number">Enter a number:</label>
+    <input type="number" id="number" min="1" oninput="findEvens()">
+    <p>Even Number: <span id="result"></span></p>
+
+    <script>
+        function findEvens() {
+            let num = document.getElementById("number").value;
+            let evenNumbers = [];
+            let i = 2;
+            while (i <= num) {
+                evenNumbers.push(i);
+                i += 2;
+            }
+            document.getElementById("result").innerHTML = evenNumbers.join(", ");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+<title>DOM Methods Example</title>
+</head>
+<body>
+<h1 id="title">Hello World</h1>
+<p class="text">This is a paragraph.</p>
+<div>
+    <span>Span Element</span>
+</div>
+<p>This is another paragraph.</p>
+<button onclick="accessElements()">Click Me!</button>
+<script> 
+    function accessElements() {
+        // getElementById
+        document.getElementById('title').innerHTML = "Title changed";
+        // getElementsByClassName
+        document.getElementsByClassName('text')[0].innerHTML = "text changed";
+        // getElementsByTagName
+        document.getElementsByTagName('span')[0].innerHTML = "Span Element Changed";
+        // querySelector / querySelectorAll
+        document.querySelectorAll('p')[1].innerHTML = "Paragraph Changed";
+        }
+</script>
+</body>
+</html>

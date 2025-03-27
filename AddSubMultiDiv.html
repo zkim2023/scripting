@@ -1,0 +1,25 @@
+<script>
+function add(a, b){
+    return a + b;
+}
+
+function subtract(a, b){
+    return a - b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b){
+    return b !== 0 ? a / b : "Cannot divide by zero";
+}
+    
+//Assignning values to parameters
+let num1 = 10;
+let num2 = 5;
+document.write("<br>Addition: " + add(num1, num2));
+document.write("<br>Subtraction: " + subtract(num1, num2));
+document.write("<br>Multiplication: " + multiply(num1, num2));
+document.write("<br>Division: " + divide(num1, num2));
+</script>

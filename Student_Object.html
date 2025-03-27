@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Object</title>
+</head>
+<body>
+    <h2>Student Information</h2>
+    <p id="studentInfo"></p>
+
+    <script>
+        class Student {
+            constructor(name, age, grade) {
+                this.name = name;
+                this.age = age;
+                this.grade = grade;
+            }
+
+            displayInfo() {
+                return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
+            }
+        }
+
+        let student = new Student("John Doe", 20, "A");
+        document.getElementById("studentInfo").innerHTML = student.displayInfo();
+    </script>
+</body>
+</html>

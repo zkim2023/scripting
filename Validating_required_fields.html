@@ -1,0 +1,15 @@
+<form onsubmit="return validate()">
+    <label for="email">Email:</label>
+    <input type="text" placeholder="enter your email" id="email" name="email">
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    function validate() {
+        let email = document.getElementById('email').value;
+        if (!email) {
+            alert('Email is required!'); return false;
+        }
+        return true;
+    }
+</script>

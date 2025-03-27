@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            font-size: 16px;
+            padding: 8px;
+            margin: 5px;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Grade Calculator</h2>
+    <input type="number" id="scoreInput" placeholder="Enter your score">
+    <button onclick="calculateGrade()">Get Grade</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateGrade() {
+            let score = document.getElementById("scoreInput").value;
+            let result = document.getElementById("result");
+
+            if (score === "") {
+                result.textContent = "Please enter a score.";
+                return;
+            }
+
+            score = parseFloat(score);
+
+            if (isNaN(score) || score < 0 || score > 100) {
+                result.textContent = "Invalid input. Enter a score between 0 and 100.";
+                return;
+            }
+
+            let grade;
+            if (score >= 90) {
+                grade = "A";
+            } else if (score >= 80) {
+                grade = "B";
+            } else if (score >= 70) {
+                grade = "C";
+            } else {
+                grade = "F";
+            }
+
+            result.textContent = "Your grade is: " + grade;
+        }
+    </script>
+
+</body>
+</html>

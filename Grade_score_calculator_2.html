@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+</head>
+<body>
+    <h2>Grade Calculator</h2>
+    <label for="grade">Enter Numeric Grade:</label>
+    <input type="number" id="grade" min="0" max="100">
+    <button onclick="calculateGrade()">Submit</button>
+    <p>Your Grade: <span id="result">-</span></p>
+   
+    <script>
+        function calculateGrade() {
+            let grade = parseFloat(document.getElementById("grade").value);
+            let letterGrade = "-";
+            
+            if (!isNaN(grade)) {
+                if (grade >= 90) {
+                    letterGrade = "A";
+                } else if (grade >= 80) {
+                    letterGrade = "B";
+                } else if (grade >= 70) {
+                    letterGrade = "C";
+                } else {
+                    letterGrade = "F";
+                }
+            }
+            
+            document.getElementById("result").innerHTML = letterGrade;
+        }
+    </script>
+</body>
+</html>
